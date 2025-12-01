@@ -158,7 +158,7 @@ resource "aws_instance" "gateway" {
   # Instance metadata service configuration (IMDSv1 for compatibility)
   metadata_options {
     http_endpoint               = "enabled"
-    http_tokens                 = "required # Disable IMDS v1
+    http_tokens                 = "required" # Disable IMDS v1
     http_put_response_hop_limit = 2
   }
 
@@ -247,7 +247,7 @@ resource "aws_instance" "relay" {
 
   metadata_options {
     http_endpoint               = "enabled"
-    http_tokens                 = "required # Disable IMDS v1
+    http_tokens                 = "required" # Disable IMDS v1
     http_put_response_hop_limit = 2
   }
 
